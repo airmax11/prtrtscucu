@@ -1,0 +1,28 @@
+{
+  "name": "prtrtscucu",
+  "version": "1.0.0",
+  "description": "farmework testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airmax11/prtrtscucu.git"
+  },
+  "author": "Max",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/airmax11/prtrtscucu/issues"
+  },
+  "homepage": "https://github.com/airmax11/prtrtscucu#readme",
+  "dependencies": {
+    "protractor": "^5.4.3",
+    "typescript": "~3.8.2",
+    "jasmine": "~3.5.0",
+    "@types/jasmine": "~3.5.7",
+    "@types/jasminewd2": "~2.0.8",
+    "ts-node": "8.6.2",
+    "@types/node": "13.7.6"
+  }
+}
