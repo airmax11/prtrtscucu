@@ -4,14 +4,17 @@
   "description": "farmework testing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "protractor JSFiles/configuration.js",
+    "pretest": "tsc",
+    "protractor": "./node_modules/protractor/built/cli.js",
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/airmax11/prtrtscucu.git"
   },
   "author": "Max",
-  "license": "ISC",
+  "liense": "ISC",
   "bugs": {
     "url": "https://github.com/airmax11/prtrtscucu/issues"
   },

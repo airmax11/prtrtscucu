@@ -1,7 +1,9 @@
 import { browser, element, by } from "protractor";
 import {calculators} from "./pageObjects/calculator"
+import { angularPage } from "./pageObjects/angularSite";
 
 let calc = new calculators();
+let ang = new angularPage();
 
 describe('Protractor baby group', ()=> {
     it('Open Angular js website', async ()=> {
@@ -17,8 +19,8 @@ describe('Protractor baby group', ()=> {
 
     it('Angular website opening...', async ()=>{
         await browser.get('https://angularjs.org/');
-        await element(by.linkText('angular.io')).click();
-        await element(by.css('input[type="search"]')).sendKeys('hello');
+        await ang.angulartLink.click();
+        await ang.searchField.sendKeys('Test');
         await browser.sleep(2000);
 
     })
