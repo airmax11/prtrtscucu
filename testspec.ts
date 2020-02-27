@@ -1,17 +1,25 @@
 import { browser, element, by } from "protractor";
+import {calculators} from "./pageObjects/calculator"
 
-describe('Protractor baby group',function() {
-    it('Open Angular js website', function() {
-        browser.get("http://juliemr.github.io/protractor-demo/");
-        element(by.model("first")).sendKeys("3");
-        element(by.model("second")).sendKeys("7");
-        element(by.id("gobutton")).click();
-        const test = element(by.css("h2[class='ng-binding']")).getText().then(function(text){
-            console.log(text);
-            return text;
-        });
-        expect(test).toBe("10");
+let calc = new calculators();
+
+describe('Protractor baby group', ()=> {
+    it('Open Angular js website', async ()=> {
+        await browser.get("http://juliemr.github.io/protractor-demo/");
+        await calc.firstEditBox.sendKeys("7");
+        await calc.secondEditBox.sendKeys("8");
+        await calc.goButton.click();
+        const test = await calc.ngb.getText();
+        expect(test).toBe("15");
         console.log("Spec_1")
     
     });
+
+    it('Angular website opening...', async ()=>{
+        await browser.get('https://angularjs.org/');
+        await element(by.linkText('angular.io')).click();
+        await element(by.css('input[type="search"]')).sendKeys('hello');
+        await browser.sleep(2000);
+
+    })
 });

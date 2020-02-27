@@ -7,7 +7,8 @@ export let config: Config = {
       //  "spec2.js",
       //  "actions.js",
       //  "frame.js",
-      "project_1/practice.js"
+      //"project_1/practice.js"
+      "testspec.js"
      ],
       capabilities: {
           'browserName': 'chrome',
