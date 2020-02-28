@@ -2,8 +2,6 @@ import { Given, When, Then } from "cucumber";
 import {calculators} from "../pageObjects/calculator";
 import { browser } from "protractor";
 
-expect
-
 let calc = new calculators();
 
 Given('I navigate to the main calculation page', async ()=> {
@@ -17,7 +15,13 @@ When('I make a calculation {string} plus {string}', async (string, string2) => {
 
 Then('I see the correct calculation results is {string}', async (string)=> {
     await calc.goButton.click();
-    await expect(calc.ngb.getText()).toBe(string);
+    await calc.ngb.getText().then(function(text){
+      console.log(text);
+      if (text === string) {
+        console.log("PASSED")
+      }
+
+    })
 });
 
 // Given('I navigate to the angular site', function () {
