@@ -1,4 +1,4 @@
-import { browser, element, by } from "protractor";
+import { browser } from "protractor";
 import {calculators} from "./pageObjects/calculator"
 import { angularPage } from "./pageObjects/angularSite";
 
