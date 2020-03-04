@@ -2,21 +2,24 @@ Feature: To check two features
 
    Feature description is following: check something to show it works
 
+   Scenario Outline: To check calculation 3
 
-   Scenario: To check calculation
+   Given I navigate to the "calc" page
+   When I make a calculation "<num1>" plus "<num2>"
+   Then I see the correct calculation results is "<num3>"
 
-   Given I navigate to the main calculation page
-   When I make a calculation "3" plus "8"
-   Then I see the correct calculation results is "11"
+   Examples:
+   | num1 | num2 | num3 |
+   | 3  | 4  | 7 |
+   | 4  | 4  | 8 |
 
-   Scenario: To check calculation 2
+   Scenario Outline: To check Angular Website access
 
-   Given I navigate to the main calculation page
-   When I make a calculation "2" plus "2"
-   Then I see the correct calculation results is "4"
+   Given I navigate to the "ang" page
+   When I redirect to angular second site
+   Then I can enter "<key>" word into search field
 
-#    Scenario: To check Angular Website access
-
-#    Given I navigate to the angular site
-#    When I redirect to angular second site
-#    Then I can enter "hello" word into search field
+   Examples:
+   | key |
+   | hello |
+   | test |

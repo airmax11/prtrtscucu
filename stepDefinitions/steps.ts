@@ -1,11 +1,18 @@
 import { Given, When, Then } from "cucumber";
 import {calculators} from "../pageObjects/calculator";
 import { browser } from "protractor";
+import { angularPage } from "../pageObjects/angularSite";
 
 let calc = new calculators();
+let ang = new angularPage();
 
-Given('I navigate to the main calculation page', async ()=> {
+Given('I navigate to the {string} page', async (string)=> {
+  if(string === 'calc') {
   await browser.get("http://juliemr.github.io/protractor-demo/");
+  }
+  else if(string === 'ang'){
+    await browser.get('https://angularjs.org/');
+  }
 });
 
 When('I make a calculation {string} plus {string}', async (string, string2) => {
@@ -24,17 +31,11 @@ Then('I see the correct calculation results is {string}', async (string)=> {
     })
 });
 
-// Given('I navigate to the angular site', function () {
-//   // Write code here that turns the phrase above into concrete actions
-//   return 'pending';
-// });
+When('I redirect to angular second site', async () => {
+  await ang.angulartLink.click();
+});
 
-// When('I redirect to angular second site', function () {
-//   // Write code here that turns the phrase above into concrete actions
-//   return 'pending';
-// });
-
-// Then('I can enter {string} word into search field', function (string) {
-//   // Write code here that turns the phrase above into concrete actions
-//   return 'pending';
-// });
+Then('I can enter {string} word into search field', async (string) => {
+  await browser.sleep(2000);
+  await ang.searchField.sendKeys('Test');
+});
