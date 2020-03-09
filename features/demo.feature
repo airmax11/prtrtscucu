@@ -2,6 +2,7 @@ Feature: To check two features
 
    Feature description is following: check something to show it works
 
+   @smoke
    Scenario Outline: To check calculation 3
 
    Given I navigate to the "calc" page
@@ -10,7 +11,7 @@ Feature: To check two features
 
    Examples:
    | num1 | num2 | num3 |
-   | 3  | 4  | 7 |
+   | 3  | 4  | 71 |
    | 4  | 4  | 8 |
 
    Scenario Outline: To check Angular Website access
