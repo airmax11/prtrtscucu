@@ -1,10 +1,12 @@
 import { Given, When, Then } from "cucumber";
-import {calculators} from "../pageObjects/calculator";
+import { calculators } from "../pageObjects/calculator";
 import { browser } from "protractor";
 import { angularPage } from "../pageObjects/angularSite";
+import chai from "chai";
 
 let calc = new calculators();
 let ang = new angularPage();
+let expect = chai.expect;
 
 Given('I navigate to the {string} page', async (string)=> {
   if(string === 'calc') {
@@ -23,11 +25,7 @@ When('I make a calculation {string} plus {string}', async (string, string2) => {
 Then('I see the correct calculation results is {string}', async (string)=> {
     await calc.goButton.click();
     await calc.ngb.getText().then(function(text){
-      console.log(text);
-      if (text === string) {
-        console.log("PASSED")
-      }
-
+      expect(text).to.equal(string)
     })
 });
 

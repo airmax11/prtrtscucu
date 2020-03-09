@@ -1,3 +1,4 @@
 node_modules/*
 JSFiles/*
 .vscode/*
+package-lock.json
