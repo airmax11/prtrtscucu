@@ -2,3 +2,4 @@ node_modules/*
 JSFiles/*
 .vscode/*
 report/cucumber_report.html
+cucumberreport.json
