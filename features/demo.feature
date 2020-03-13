@@ -11,8 +11,9 @@ Feature: To check two features
 
    Examples:
    | num1 | num2 | num3 |
-   | 3  | 4  | 71 |
+   | 3  | 4  | 7 |
    | 4  | 4  | 8 |
+   | 4  | 5  | 9 |
 
    Scenario Outline: To check Angular Website access
 

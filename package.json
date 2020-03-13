@@ -8,7 +8,9 @@
     "cucumbertest": "protractor JSFiles/cucumberconfig.js",
     "pretest": "tsc",
     "protractor": "./node_modules/protractor/built/cli.js",
-    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update",
+    "update_start": "npm run webdriver-update &&npm run pretest&& npm run cucumbertest",
+    "start": "npm run pretest&& npm run cucumbertest"
   },
   "repository": {
     "type": "git",
