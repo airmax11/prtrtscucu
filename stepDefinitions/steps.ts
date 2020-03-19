@@ -13,7 +13,7 @@ Given('I navigate to the {string} page', async (string)=> {
   await browser.get("http://juliemr.github.io/protractor-demo/");
   }
   else if(string === 'ang'){
-    await browser.get('http://angularjs.org/');
+    await browser.get('https://angularjs.org/');
   }
 });
 
