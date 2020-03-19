@@ -50,7 +50,7 @@ export let config: Config = {
           'browserName': 'chrome',
           'chromeOptions': {
              args: [
-       //   "--headless",
+          "--headless",
           "--window-size=1600,900"
         ],
           'w3c': false
