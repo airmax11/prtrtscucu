@@ -29,7 +29,7 @@ Then('I see the correct calculation results is {string}', async (string)=> {
     })
 });
 
-When('I redirect to angular second site', async () => {
+When('I redirect to angular second site', {timeout: 15000}, async () => {
   await ang.angulartLink.click();
 });
 
