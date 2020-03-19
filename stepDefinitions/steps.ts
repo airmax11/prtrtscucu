@@ -8,7 +8,7 @@ let calc = new calculators();
 let ang = new angularPage();
 let expect = chai.expect;
 
-Given('I navigate to the {string} page', async (string)=> {
+Given('I navigate to the {string} page', {timeout: 15000} ,async (string)=> {
   if(string === 'calc') {
   await browser.get("http://juliemr.github.io/protractor-demo/");
   }
