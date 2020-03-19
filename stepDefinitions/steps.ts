@@ -10,10 +10,10 @@ let expect = chai.expect;
 
 Given('I navigate to the {string} page', async (string)=> {
   if(string === 'calc') {
-  await browser.get("https://juliemr.github.io/protractor-demo/");
+  await browser.get("http://juliemr.github.io/protractor-demo/");
   }
   else if(string === 'ang'){
-    await browser.get('https://angularjs.org/');
+    await browser.get('http://angularjs.org/');
   }
 });
 
