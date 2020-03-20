@@ -11,6 +11,4 @@ export class angularPage {
         this.searchField = element(by.css('input[type="search"]'));
     }
 
-
-
 }
